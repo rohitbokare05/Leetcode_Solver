@@ -1,71 +1,17 @@
-# leetcode-solver README
+\# LeetCode Solver VS Code ExtensionLeetCode Solver is a Visual Studio Code extension designed to streamline your problem-solving workflow by integrating LeetCode directly into your development environment. This extension allows you to fetch test cases for LeetCode problems, view them in a user-friendly interface, and execute your solutions in C++ or Python without leaving VS Code.## Features- \*\*Fetch Test Cases\*\*: Automatically retrieve input and output test cases for a given LeetCode problem using its title slug.- \*\*Webview Display\*\*: Present fetched test cases in an interactive webview within VS Code, enhancing readability and accessibility.- \*\*Open Solution Files\*\*: Quickly open corresponding C++ (1.cpp) or Python (solution.py) solution files directly from the webview.- \*\*Run Solutions\*\*: Compile and execute your C++ or Python solutions against the fetched test cases, with results displayed in the webview.## Prerequisites- \*\*Python 3\*\*: Ensure that Python 3 is installed on your system and accessible via the command line.- \*\*G++ Compiler\*\*: For running C++ solutions, the g++ compiler must be installed and available in your system's PATH.## Installation1. \*\*Clone the Repository\*\*:
 
-This is the README for your extension "leetcode-solver". After writing up a brief description, we recommend including the following sections.
+Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   bash     git clone https://github.com/rohitbokare/leetcode-solver.git   `
 
-## Features
+2\. \*\*Install Dependencies\*\*: Navigate to the extension's directory and install the required Node.js packages:
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   bash     cd leetcode-solver     npm install   `
 
-For example if there is an image subfolder under your extension project workspace:
+3\. \*\*Open in VS Code\*\*: Open the extension folder in Visual Studio Code:
 
-\!\[feature X\]\(images/feature-x.png\)
+Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   bash     code .   `
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+4\. \*\*Build the Extension\*\*: Compile the extension by running:
 
-## Requirements
+Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   bash     npm run compile   `
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+5\. \*\*Launch the Extension\*\*: Press F5 to open a new VS Code window with the extension loaded.## Usage1. \*\*Activate the Command\*\*: Press Ctrl+Shift+P to open the command palette, type Fetch LeetCode Test Cases, and press Enter.2. \*\*Enter the Title Slug\*\*: Input the LeetCode problem's title slug (the URL-friendly version of the problem's title) when prompted.3. \*\*View Test Cases\*\*: The extension will fetch the test cases and display them in a webview panel within VS Code.4. \*\*Open Solution Files\*\*: Use the provided buttons in the webview to open the corresponding C++ (1.cpp) or Python (solution.py) solution files.5. \*\*Run Solutions\*\*: Click the Run C++ File or Run Python File button in the webview to compile and execute your solution against the fetched test cases. The output will be displayed in the webview.## Extension Structure- \*\*src/extension.ts\*\*: Contains the main logic for activating the extension, registering commands, and handling interactions between VS Code and the webview.- \*\*src/scripts/fetch\_leetcode.py\*\*: A Python script responsible for fetching test cases from LeetCode based on the provided title slug.- \*\*src/scripts/run\_testcase.py\*\*: A Python script that executes the compiled C++ solution against the test cases and returns the results.- \*\*src/scripts/run\_python.py\*\*: A Python script that runs the Python solution against the test cases and returns the results.## ContributingContributions are welcome! Please fork the repository, create a new branch for your feature or bug fix, and submit a pull request. Ensure that your code adheres to the project's coding standards and includes appropriate tests.## LicenseThis project is licensed under the MIT License. See the \[LICENSE\](LICENSE) file for details.## AcknowledgementsThis extension was inspired by the need for a seamless workflow when solving LeetCode problems directly within Visual Studio Code.## Resources- \*\*VS Code Extension API\*\*: https://code.visualstudio.com/api- \*\*Creating a VS Code Extension\*\*: https://code.visualstudio.com/api/get-started/your-first-extension- \*\*CPH-Leetcode Extension\*\*: https://marketplace.visualstudio.com/items?itemName=anshRastogi02.cph-leetcodeFor more information on developing VS Code extensions, refer to the official documentation.
